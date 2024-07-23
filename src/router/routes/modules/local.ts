@@ -1,5 +1,5 @@
 import type { AppRouteModule } from '@/router/types';
-// import { LAYOUT } from '@/router/constant';
+import { LAYOUT } from '@/router/constant';
 
 /**
  * 这里放本地路由  就是后台没有包含的
@@ -8,22 +8,85 @@ import type { AppRouteModule } from '@/router/types';
  * 注意 component: LAYOUT 一定要有
  */
 export const localRoutes: AppRouteModule[] = [
-  // {
-  //   component: LAYOUT,
-  //   path: '/system/oss-config',
-  //   name: 'OssConfigRoot',
-  //   meta: { title: 'OSS配置管理' },
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/system/oss/OssConfig.vue'),
-  //       name: 'OssConfig',
-  //       meta: {
-  //         hidden: true,
-  //         title: 'OSS配置管理',
-  //         currentActiveMenu: '/system/oss',
-  //       },
-  //     },
-  //   ],
-  // },
+  {
+    component: LAYOUT,
+    path: '/system/oss-config',
+    name: 'OssConfigRoot',
+    meta: { title: 'OSS配置管理' },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/system/oss/OssConfig.vue'),
+        name: 'OssConfig',
+        meta: {
+          hidden: true,
+          title: 'OSS配置管理',
+          currentActiveMenu: '/system/oss',
+        },
+      },
+    ],
+  },
+  {
+    component: LAYOUT,
+    path: '/tool/generate',
+    name: 'ToolRoute',
+    meta: {
+      title: '修改生成配置',
+      hidden: true,
+    },
+    children: [
+      {
+        path: 'edit/:tableId',
+        component: () => import('@/views/tool/gen/EditGenerate.vue'),
+        name: 'EditGenerate',
+        meta: {
+          hidden: true,
+          title: '修改生成配置',
+          currentActiveMenu: '/tool/gen',
+        },
+      },
+    ],
+  },
+  {
+    component: LAYOUT,
+    path: '/account',
+    name: 'AccountInfo',
+    redirect: '/setting',
+    meta: {
+      hideMenu: true,
+      title: '账号',
+    },
+    children: [
+      {
+        path: 'setting',
+        name: 'AccountSettingPage',
+        component: () => import('@/views/auth/profile/index.vue'),
+        meta: {
+          title: '个人设置',
+        },
+      },
+    ],
+  },
+  {
+    component: LAYOUT,
+    path: '/system/assign-roles',
+    name: 'AssignRolesRoot',
+    redirect: '/:roleId',
+    meta: {
+      hideMenu: true,
+      title: '分配角色',
+    },
+    children: [
+      {
+        path: ':roleId',
+        name: 'AssignRoles',
+        component: () => import('@/views/system/role/AssignRoles/index.vue'),
+        meta: {
+          title: '分配角色',
+          currentActiveMenu: '/system/role',
+        },
+      },
+    ],
+  }
+  
 ];

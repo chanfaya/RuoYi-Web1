@@ -15,11 +15,6 @@ export const settingList = [
     component: 'SecureSetting',
   },
   {
-    key: '3',
-    name: '账号绑定',
-    component: 'AccountBind',
-  },
-  {
     key: '4',
     name: '在线设备',
     component: 'OnlineDevice',
