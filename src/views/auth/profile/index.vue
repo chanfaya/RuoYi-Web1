@@ -21,7 +21,6 @@
 
   import BaseSetting from './BaseSetting.vue';
   import SecureSetting from './SecureSetting.vue';
-  import AccountBind from './AccountBind.vue';
   import OnlineDevice from './OnlineDevice.vue';
   import MsgNotify from './MsgNotify.vue';
 
@@ -32,7 +31,6 @@
       TabPane: Tabs.TabPane,
       BaseSetting,
       SecureSetting,
-      AccountBind,
       MsgNotify,
       OnlineDevice,
     },

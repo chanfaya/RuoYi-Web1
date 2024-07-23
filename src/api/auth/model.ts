@@ -26,12 +26,9 @@ export interface TenantResp {
 /**
  * 登录类型
  * password 密码
- * sms 短信
- * social 第三方oauth
- * email 邮箱
  * xcx 小程序
  */
-type GrantType = 'password' | 'sms' | 'social' | 'email' | 'xcx';
+type GrantType = 'password' | 'xcx';
 
 /**
  * @description: 所有登录类型都需要用到的
@@ -43,18 +40,6 @@ export interface BaseLoginParams {
   clientId?: string;
   grantType: GrantType;
   tenantId: string;
-}
-
-/**
- * @description: oauth登录需要用到的参数
- * @param socialCode 第三方参数
- * @param socialState 第三方参数
- * @param source 与后端的 justauth.type.xxx的回调地址的source对应
- */
-export interface OAuthLoginParams extends BaseLoginParams {
-  socialCode: string;
-  socialState: string;
-  source: string;
 }
 
 /**
@@ -71,7 +56,7 @@ export interface SimpleLoginParams extends BaseLoginParams {
   password: string;
 }
 
-export type LoginParams = SimpleLoginParams | OAuthLoginParams;
+export type LoginParams = SimpleLoginParams;
 
 /**
  * @description: 登录结果

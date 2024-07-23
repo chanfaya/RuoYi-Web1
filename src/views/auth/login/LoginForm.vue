@@ -85,23 +85,11 @@
     </FormItem>
     <ARow class="enter-x" :gutter="[16, 16]">
       <ACol :md="8" :xs="24">
-        <Button block @click="setLoginState(LoginStateEnum.MOBILE)">
-          {{ t('sys.login.mobileSignInFormTitle') }}
-        </Button>
-      </ACol>
-      <ACol :md="8" :xs="24">
-        <Button block @click="setLoginState(LoginStateEnum.QR_CODE)" disabled>
-          {{ t('sys.login.qrSignInFormTitle') }}
-        </Button>
-      </ACol>
-      <ACol :md="8" :xs="24">
         <Button block @click="setLoginState(LoginStateEnum.REGISTER)" disabled>
           {{ t('sys.login.registerButton') }}
         </Button>
       </ACol>
     </ARow>
-
-    <Divider class="enter-x">{{ t('sys.login.otherSignIn') }}</Divider>
 
     <!-- <div class="flex justify-evenly enter-x" :class="`${prefixCls}-sign-in-way`">
       <GithubFilled />
@@ -110,7 +98,6 @@
       <GoogleCircleFilled />
       <TwitterCircleFilled />
     </div> -->
-    <OAuthLogin :disabled="loading" />
   </Form>
 </template>
 <script lang="ts" setup>
@@ -126,7 +113,6 @@
     Image,
     Select,
     SelectOption,
-    Divider,
   } from 'ant-design-vue';
   // import {
   //   GithubFilled,
@@ -148,10 +134,7 @@
   import { tenantList } from '@/api/auth';
   import { captchaImage } from '@/api/auth/captcha';
   import { TenantResp } from '@/api/auth/model';
-
   import { useLocalStorage } from '@vueuse/core';
-  import OAuthLogin from './OAuthLogin.vue';
-
   import { createLocalStorage } from '@/utils/cache';
   import { SelectValue } from 'ant-design-vue/es/select';
 

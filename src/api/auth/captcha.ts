@@ -5,27 +5,7 @@ import { defHttp } from '@/utils/http/axios';
  */
 
 enum Api {
-  smsCode = '/resource/sms/code',
-  emailCode = '/resource/email/code',
   captchaImage = '/auth/code',
-}
-
-/**
- * 发送短信验证码
- * @param phoneNumber 手机号
- * @returns
- */
-export function sendSmsCode(phonenumber: string) {
-  return defHttp.get<void>({ url: Api.smsCode, params: { phonenumber } });
-}
-
-/**
- * 发送邮件验证码
- * @param email 邮箱
- * @returns
- */
-export function sendEmailCode(email: string) {
-  return defHttp.get<void>({ url: Api.emailCode + '/' + email });
 }
 
 /**
