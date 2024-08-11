@@ -23,7 +23,7 @@
 
   const isUpdate = ref<boolean>(false);
   const title = computed<string>(() => {
-    return isUpdate.value ? '编辑商品三级分类' : '新增商品三级分类';
+    return isUpdate.value ? '编辑商品分类' : '新增商品分类';
   });
 
   const [registerInnerModal, { modalLoading, closeModal }] = useModalInner(

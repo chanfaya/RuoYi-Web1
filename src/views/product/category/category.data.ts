@@ -7,46 +7,11 @@ export const formSchemas: FormSchema[] = [
     field: 'name',
     component: 'Input',
   },
-  {
-    label: '父分类id',
-    field: 'parentCid',
-    component: 'Input',
-  },
-  {
-    label: '层级',
-    field: 'catLevel',
-    component: 'Input',
-  },
-  {
-    label: '是否显示[0-不显示，1显示]',
-    field: 'showStatus',
-    component: 'RadioButtonGroup',
-  },
-  {
-    label: '排序',
-    field: 'sort',
-    component: 'Input',
-  },
-  {
-    label: '图标地址',
-    field: 'icon',
-    component: 'Input',
-  },
-  {
-    label: '计量单位',
-    field: 'productUnit',
-    component: 'Input',
-  },
-  {
-    label: '商品数量',
-    field: 'productCount',
-    component: 'Input',
-  },
 ];
 
 export const columns: BasicColumn[] = [
   {
-    title: '分类id',
+    title: 'id',
     dataIndex: 'catId',
   },
   {
@@ -62,7 +27,7 @@ export const columns: BasicColumn[] = [
     dataIndex: 'catLevel',
   },
   {
-    title: '是否显示[0-不显示，1显示]',
+    title: '是否显示',
     dataIndex: 'showStatus',
   },
   {
@@ -85,11 +50,11 @@ export const columns: BasicColumn[] = [
 
 export const modalSchemas: FormSchema[] = [
   {
-    label: '分类id',
+    label: 'id',
     field: 'catId',
     required: false,
     component: 'Input',
-      show: false,
+    show: false,
   },
   {
     label: '分类名称',
@@ -98,19 +63,13 @@ export const modalSchemas: FormSchema[] = [
     component: 'Input',
   },
   {
-    label: '父分类id',
+    label: '上级分类',
     field: 'parentCid',
     required: true,
     component: 'Input',
   },
   {
-    label: '层级',
-    field: 'catLevel',
-    required: true,
-    component: 'Input',
-  },
-  {
-    label: '是否显示[0-不显示，1显示]',
+    label: '是否显示',
     field: 'showStatus',
     required: true,
     component: 'RadioButtonGroup',
@@ -130,12 +89,6 @@ export const modalSchemas: FormSchema[] = [
   {
     label: '计量单位',
     field: 'productUnit',
-    required: true,
-    component: 'Input',
-  },
-  {
-    label: '商品数量',
-    field: 'productCount',
     required: true,
     component: 'Input',
   },

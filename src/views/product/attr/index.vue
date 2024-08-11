@@ -15,12 +15,7 @@
           v-auth="'pms:attr:remove'"
           >删除</a-button
         >
-        <a-button
-          type="primary"
-          @click="handleAdd"
-          v-auth="'pms:attr:add'"
-          >新增</a-button
-        >
+        <a-button type="primary" @click="handleAdd" v-auth="'pms:attr:add'">新增</a-button>
       </template>
       <template #bodyCell="{ column, record }">
         <template v-if="column.key === 'action'">

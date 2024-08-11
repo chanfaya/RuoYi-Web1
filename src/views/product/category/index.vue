@@ -3,7 +3,7 @@
     <BasicTable @register="registerTable">
       <template #toolbar>
         <a-button
-          @click="downloadExcel(categoryExport, '商品三级分类数据', getForm().getFieldsValue())"
+          @click="downloadExcel(categoryExport, '分类维护', getForm().getFieldsValue())"
           v-auth="'pms:category:export'"
           >导出</a-button
         >
@@ -15,12 +15,7 @@
           v-auth="'pms:category:remove'"
           >删除</a-button
         >
-        <a-button
-          type="primary"
-          @click="handleAdd"
-          v-auth="'pms:category:add'"
-          >新增</a-button
-        >
+        <a-button type="primary" @click="handleAdd" v-auth="'pms:category:add'">新增</a-button>
       </template>
       <template #bodyCell="{ column, record }">
         <template v-if="column.key === 'action'">
@@ -73,7 +68,7 @@
     rowSelection: {
       type: 'checkbox',
     },
-    title: '商品三级分类列表',
+    title: '分类维护',
     api: categoryList,
     showIndexColumn: false,
     rowKey: 'catId',

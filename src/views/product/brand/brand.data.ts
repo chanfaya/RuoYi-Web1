@@ -18,7 +18,7 @@ export const formSchemas: FormSchema[] = [
     component: 'InputTextArea',
   },
   {
-    label: '显示状态[0-不显示；1-显示]',
+    label: '显示状态',
     field: 'showStatus',
     component: 'RadioButtonGroup',
   },
@@ -52,7 +52,7 @@ export const columns: BasicColumn[] = [
     dataIndex: 'descript',
   },
   {
-    title: '显示状态[0-不显示；1-显示]',
+    title: '显示状态',
     dataIndex: 'showStatus',
   },
   {
@@ -71,7 +71,7 @@ export const modalSchemas: FormSchema[] = [
     field: 'brandId',
     required: false,
     component: 'Input',
-      show: false,
+    show: false,
   },
   {
     label: '品牌名',
@@ -92,7 +92,7 @@ export const modalSchemas: FormSchema[] = [
     component: 'InputTextArea',
   },
   {
-    label: '显示状态[0-不显示；1-显示]',
+    label: '显示状态',
     field: 'showStatus',
     required: true,
     component: 'RadioButtonGroup',

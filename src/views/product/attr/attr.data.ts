@@ -8,12 +8,12 @@ export const formSchemas: FormSchema[] = [
     component: 'Input',
   },
   {
-    label: '是否需要检索[0-不需要，1-需要]',
+    label: '是否需要检索',
     field: 'searchType',
     component: 'Select',
   },
   {
-    label: '值类型[0-为单个值，1-可以选择多个值]',
+    label: '值类型',
     field: 'valueType',
     component: 'Select',
   },
@@ -23,17 +23,17 @@ export const formSchemas: FormSchema[] = [
     component: 'Input',
   },
   {
-    label: '可选值列表[用逗号分隔]',
+    label: '可选值列表',
     field: 'valueSelect',
     component: 'Input',
   },
   {
-    label: '属性类型[0-销售属性，1-基本属性，2-既是销售属性又是基本属性]',
+    label: '属性类型',
     field: 'attrType',
     component: 'Select',
   },
   {
-    label: '启用状态[0 - 禁用，1 - 启用]',
+    label: '启用状态',
     field: 'enable',
     component: 'Input',
   },
@@ -43,7 +43,7 @@ export const formSchemas: FormSchema[] = [
     component: 'Input',
   },
   {
-    label: '快速展示【是否展示在介绍上；0-否 1-是】，在sku中仍然可以调整',
+    label: '快速展示',
     field: 'showDesc',
     component: 'Input',
   },
@@ -51,19 +51,15 @@ export const formSchemas: FormSchema[] = [
 
 export const columns: BasicColumn[] = [
   {
-    title: '属性id',
-    dataIndex: 'attrId',
-  },
-  {
     title: '属性名',
     dataIndex: 'attrName',
   },
   {
-    title: '是否需要检索[0-不需要，1-需要]',
+    title: '是否需要检索',
     dataIndex: 'searchType',
   },
   {
-    title: '值类型[0-为单个值，1-可以选择多个值]',
+    title: '值类型',
     dataIndex: 'valueType',
   },
   {
@@ -71,15 +67,15 @@ export const columns: BasicColumn[] = [
     dataIndex: 'icon',
   },
   {
-    title: '可选值列表[用逗号分隔]',
+    title: '可选值列表',
     dataIndex: 'valueSelect',
   },
   {
-    title: '属性类型[0-销售属性，1-基本属性，2-既是销售属性又是基本属性]',
+    title: '属性类型',
     dataIndex: 'attrType',
   },
   {
-    title: '启用状态[0 - 禁用，1 - 启用]',
+    title: '启用状态',
     dataIndex: 'enable',
   },
   {
@@ -87,19 +83,12 @@ export const columns: BasicColumn[] = [
     dataIndex: 'catelogId',
   },
   {
-    title: '快速展示【是否展示在介绍上；0-否 1-是】，在sku中仍然可以调整',
+    title: '快速展示',
     dataIndex: 'showDesc',
   },
 ];
 
 export const modalSchemas: FormSchema[] = [
-  {
-    label: '属性id',
-    field: 'attrId',
-    required: false,
-    component: 'Input',
-      show: false,
-  },
   {
     label: '属性名',
     field: 'attrName',
@@ -107,13 +96,13 @@ export const modalSchemas: FormSchema[] = [
     component: 'Input',
   },
   {
-    label: '是否需要检索[0-不需要，1-需要]',
+    label: '是否需要检索',
     field: 'searchType',
     required: true,
     component: 'Select',
   },
   {
-    label: '值类型[0-为单个值，1-可以选择多个值]',
+    label: '值类型',
     field: 'valueType',
     required: true,
     component: 'Select',
@@ -125,19 +114,19 @@ export const modalSchemas: FormSchema[] = [
     component: 'Input',
   },
   {
-    label: '可选值列表[用逗号分隔]',
+    label: '可选值列表',
     field: 'valueSelect',
     required: true,
     component: 'Input',
   },
   {
-    label: '属性类型[0-销售属性，1-基本属性，2-既是销售属性又是基本属性]',
+    label: '属性类型',
     field: 'attrType',
     required: true,
     component: 'Select',
   },
   {
-    label: '启用状态[0 - 禁用，1 - 启用]',
+    label: '启用状态',
     field: 'enable',
     required: true,
     component: 'Input',
@@ -149,7 +138,7 @@ export const modalSchemas: FormSchema[] = [
     component: 'Input',
   },
   {
-    label: '快速展示【是否展示在介绍上；0-否 1-是】，在sku中仍然可以调整',
+    label: '快速展示',
     field: 'showDesc',
     required: true,
     component: 'Input',
